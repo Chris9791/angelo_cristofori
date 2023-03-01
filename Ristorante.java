@@ -28,15 +28,17 @@ public class Ristorante {
 		
 //		System.out.println(menu.length);
 		
-		
-		System.out.println("Vuoi sederti o uscire dal ristorante?\nPremi:\n1) "
-				+ "per accomodarti\n2) per uscire");
-		
+//		
+//		System.out.println("Vuoi sederti o uscire dal ristorante?\nPremi:\n1) "
+//				+ "per accomodarti\n2) per uscire");
+//		
 //		System.out.println(scelta);
 		//dopo aver inserito la scelta con 1 o 2 utilizziamo lo switch per imporre un'altra
 		//scelta all'utente, menu, ordinazione, o uscire dallo switch
 		
 		while ((start>2 || start<1) && confirm) {
+			System.out.println("Vuoi sederti o uscire dal ristorante?\nPremi:\n1) "
+					+ "per accomodarti\n2) per uscire");
 			start = select.nextInt();
 			if (start == 1) {
 				
@@ -76,7 +78,7 @@ public class Ristorante {
 						break;
 					case 3: //scelta per uscire dove viene mostrato il conto
 						System.out.println("Recati in cassa per pagare, il conto è di € " + carrello);
-						
+						start = 3;
 						scelta1 = scelta2;
 						break;
 					default:
