@@ -7,27 +7,36 @@ public class Utente {
 	private String name;
 	private String password;
 	private String id;
-	private int contatore;
+//	private int contatore;
 	
 	//costruttori
-	public Utente (String name, String password, String id, int contatore) {
+	public Utente (String name, String password, String id) {
 		this.name = name;
 		this.password = password;
 		this.id = id;
-		this.contatore = contatore;
+//		this.contatore = contatore;
 	}
 
-	public String[] createUt(String name, String password, String id) {
-		
+	public String[] createUt(
+//			String name, String password, String id
+			) {
+//		id = "0";
+//		contatore = contatore + 1;
+//		
+//		id.replace("0", contatore);
 		
 		ArrayList<String> auth = new ArrayList<String>();
 //		ArrayList<E>
 		
+		auth.add(id);
 		auth.add(name);
 		auth.add(password);
-		auth.add(id);
 		
-		return null;
+		String[] arrayUtenti = {};
+		
+		arrayUtenti = auth.toArray(arrayUtenti);
+		
+		return arrayUtenti;
 	}
 	
 	public String getName() {
@@ -46,11 +55,11 @@ public class Utente {
 		this.password = password;
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

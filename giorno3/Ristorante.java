@@ -26,6 +26,55 @@ public class Ristorante {
 		//variabile del carrello
 		int carrello = 0;
 		
+		int id = 0;
+		
+		//variabili per creazioni utenti
+		String name;
+		String password;
+		String register;
+		Integer identificativo = 0;
+		//booleano per creazione utente
+		boolean confirmUs = true;
+		
+		
+		while (confirmUs == true) {
+			//entrata nel programma
+			System.out.println("Benvenuto\nSei registrato? s/n");
+			//risposta utente
+			register = select.nextLine();
+			//controllo se registrato o meno
+			if(register.equals("n"))//registrazione utente
+			{
+					
+					System.out.println("Inserisci username:");
+					name = select.nextLine();
+					System.out.println("Inserisci password:");
+					password = select.nextLine();
+					identificativo += 1;
+					String appoggio = String.valueOf(identificativo);
+	//				System.out.println(appoggio);
+					
+					
+					Utente utenza = new Utente (name, password, appoggio);
+					String[] user = utenza.createUt();
+					System.out.println("le tue credenziali:");
+					
+					for (int i=0; i<user.length; i++) {
+						System.out.println(user[i]);
+					}
+					
+					confirmUs = false;
+
+			} else { //log utente
+				//
+			}
+			
+			
+			
+			
+		}
+		
+		
 //		System.out.println(menu.length);
 		
 //		
