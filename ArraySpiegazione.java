@@ -23,14 +23,17 @@ public class ArraySpiegazione {
 		arr = arrayList.toArray(arr);
 		System.out.println("array dopo aver aggiunto l\'elemento:" + Arrays.toString(arr));
 		
-		//arraylist ad array, e viceversa
+		//da arraylist ad array, e viceversa
 		ArrayList<Integer> arr2 = new ArrayList<Integer>();
 		arr2.add(10);
 		arr2.add(43);
 		arr2.add(2);
-		Integer[] arrayProva = null;
+		Integer[] arrayProva = {};
 		arrayProva = arr2.toArray(arrayProva);
-		System.out.println("da ArrayList a array: " + arrayProva);
+		for(int i=0; i < arrayProva.length; i++) {
+			System.out.println("da ArrayList a array: " + arrayProva[i]);
+		}
+
 		
 		
 		
