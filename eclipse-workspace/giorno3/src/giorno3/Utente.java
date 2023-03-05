@@ -1,6 +1,8 @@
-package giorno3;
+package entity;
 
 import java.util.ArrayList;
+
+
 
 public class Utente {
 	//attributi
